@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Shipping Calculator</title>
+</head>
+<body>
+    <h1>Mail Shipping Calculator</h1>
+    <form action="/mail" method="get">
+        <label>Weight (oz.):</label>
+        <input type="text" name="weight" id="weight">
+        <select name="type" id="type">
+            <option value="sletter">Letters (Stamped)</option>
+            <option value="mletter">Letters (Metered)</option>
+            <option value="lenvelope">Large Envelopes (Flats)</option>
+            <option value="fcpackageservice">First-Class Package Service—Retail</option>
+        </select>
+        <br>
+        <input type="submit" value="Calculate">
+    </form>
+    <br>
+    <input type="button" id="getPrice" value="Get Price">
+    <br>
+    <br>
+    <div id="output"></div>
+</body>
+
+<script src="./js/mailAjax.js"></script>
+</html>

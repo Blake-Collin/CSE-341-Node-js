@@ -36,5 +36,5 @@ function compute(res, op, left, right)
 
     let params = {operation: op, left: left, right: right, result: result};    
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(params))
+    res.end(JSON.stringify(params));
 }
