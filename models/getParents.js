@@ -11,14 +11,13 @@ module.exports = { request: function (req, response) {
             const id = req.query.id;            
 
             getPerson(id, function(error, result) {
-                if(error || result == null || result.length != 1)
+                if(error || result == null)
                 {
                     response.status(500).json({data: error});
-                }                
+                }
                 else
                 {
-                    var person = result[0];
-                    response.status(200).json(person);
+                    response.status(200).json(result);
                 }     
             })    
         }
@@ -27,12 +26,12 @@ module.exports = { request: function (req, response) {
 
 function getPerson(id, callback) 
 {
-    pool.query('SELECT * FROM person WHERE id = $1', [id], (err, res) => {
+    pool.query('SELECT parent_id FROM parentchild WHERE child_id = $1', [id], (err, res) => {
         if (err) {
             callback(err, null);
           }
           
-        console.log('user:', res.rows);
+        console.log('parents:', res.rows);
     
         callback(null, res.rows);
         
