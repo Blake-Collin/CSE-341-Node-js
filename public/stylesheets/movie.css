@@ -1,0 +1,21 @@
+#results div {
+    border-style: solid;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;   
+    display: flex;
+    flex-direction: row;     
+}
+
+p {
+    padding: 5px;
+}
+
+#results div div {
+    border-style: hidden;
+    flex-direction: column;
+}
+#results {
+    display: flex;
+    flex-direction: column;
+}
