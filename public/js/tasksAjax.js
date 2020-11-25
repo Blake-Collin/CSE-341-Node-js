@@ -236,7 +236,7 @@ function checkUser(inputName) {
     var name = document.getElementById(inputName).value;
     if(!name.match(NAMEREGEX))
     {
-        document.getElementById(inputName + "Err").innerHTML = "* Username is inncorrect format must be Letters only!";
+        document.getElementById(inputName + "Err").innerHTML = "* Username is inncorrect format must be Letters & Numbers only!";
         return false;
     }
     else if(name.length < 3)
