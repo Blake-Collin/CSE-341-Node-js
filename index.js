@@ -10,6 +10,10 @@ const mailService = require('./models/mailService.js');
 
 //Project Specifics
 const tasks = require('./models/project2/tasks.js')
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 //Team Assignments
@@ -29,6 +33,8 @@ app.get('/mail_service', (req, res) => mailService.request(req, res))
 //Project Specifics
 app.get('/getGroup', (req, res) => tasks.getGroup(req, res));
 app.get('/getTasks', (req, res) => tasks.getTasks(req, res));
+app.post('/loginUser', (req, res) => tasks.postLogin(req, res));
+app.post('/createUser', (req, res) => tasks.postCreateUser(req, res));
 
 
 //Team Assignments

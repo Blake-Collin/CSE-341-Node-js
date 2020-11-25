@@ -7,7 +7,7 @@ function request() {
 
     $("#results").empty();
 
-    $.get("http://www.omdbapi.com/?s=" + name + "&apikey=71b58793", function(data) {
+    $.get("https://www.omdbapi.com/?s=" + name + "&apikey=71b58793", function(data) {
         console.log(data);
         for(var i = 0; i < data.Search.length; i++)
         {
@@ -33,7 +33,7 @@ function request() {
 function details(id) {    
     console.log(id);
 
-    $.get("http://www.omdbapi.com/?i=" + id + "&apikey=71b58793", function (data) {
+    $.get("https://www.omdbapi.com/?i=" + id + "&apikey=71b58793", function (data) {
         console.log(data);
         
         //Get and clear

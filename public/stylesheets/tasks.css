@@ -1,0 +1,54 @@
+* {
+    margin: auto;
+}
+
+html {
+    max-width: 800px;
+    background-color: skyblue;
+ }
+
+ body * .error {
+     color: red;
+ }
+
+ body * {
+    color: whitesmoke;
+    background-color: gray; 
+    border-radius: 15px;
+ }
+
+.login {
+    margin-top: 50px;    
+    display: flex;        
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.login label {
+    display: flex;
+    flex-direction: column;
+}
+
+.createLogin {
+    margin-top: 50px;    
+    display: flex;        
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.createLogin label {
+    display: flex;
+    flex-direction: column;
+}
+
+
+label {
+    margin: 5px;
+    padding: 5px;
+}
+
+button {
+    margin: 5px;
+}
