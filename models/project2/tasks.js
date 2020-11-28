@@ -86,24 +86,15 @@ module.exports = { getGroup: function (request, response) {
 //Post Insert user
 function postCreateUser(username, password, name, callback)
 {
-    getUserInfo(username, function(error, results) {        
-        if(results == null)
-        {
-            pool.query('INSERT INTO users (username, password, name) VALUES ($1, $2, $3)', [username, password, name], (error, result) =>
-            {
-                if(error)
-                {
-                    callback(error, null);
-                }
-                console.log(result);
-
-                callback(null, result);
-            })
-        }
-        else
+    pool.query('INSERT INTO users (username, password, name) VALUES ($1, $2, $3)', [username, password, name], (error, result) =>
+    {
+        if(error)
         {
             callback(error, null);
-        }    
+        }
+        console.log(result);
+
+        callback(null, result);
     })
 }
 
