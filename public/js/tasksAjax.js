@@ -22,7 +22,7 @@ function login(){
         else
         {
             //Groups View   
-            $('#loginErr').html("* " + "Success");
+            createGroupView();
         }
     })
 
@@ -214,7 +214,35 @@ function createLogin(){
 
 //Create view to add new user group
 function createGroupView(){
+    $('#main').empty();
 
+    //setup
+    var div = document.createElement('div');
+    div.className ='GroupSearch';
+
+    //buttons etc
+    var label = document.createElement('label');
+    label.innerHTML = "Group ID: ";
+    var input = document.createElement('input');
+    input.setAttribute('id','id');
+    input.setAttribute('type','number');
+    var getGroup = document.createElement('button');
+    getGroup.addEventListener('click', group);
+    getGroup.innerHTML = "Get Group";
+    var getTasks = document.createElement('button');
+    getTasks.addEventListener('click', tasks);
+    getTasks.innerHTML = "Get Tasks";
+    var results = document.createElement('p');  
+    results.setAttribute('id','results');
+    div.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(getGroup);
+    div.appendChild(getTasks);
+    div.appendChild(document.createElement('br'));
+    div.appendChild(results);
+
+    $('#main').append(div);
+    
 }
 
 //Insert new group and set as admin

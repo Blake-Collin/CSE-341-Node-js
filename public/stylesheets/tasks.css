@@ -43,6 +43,13 @@ html {
     flex-direction: column;
 }
 
+.GroupSearch {
+    margin-top: 50px;    
+    display: flex;        
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
 
 label {
     margin: 5px;
