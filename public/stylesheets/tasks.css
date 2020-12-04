@@ -17,6 +17,14 @@ html {
     border-radius: 15px;
  }
 
+ h1 {
+     text-decoration: underline;
+ }
+
+ table {
+     margin-top: 35px;
+ }
+
 .login {
     margin-top: 50px;    
     display: flex;        
@@ -49,6 +57,32 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;    
+}
+
+.GroupSelect {
+    margin-top: 50px;    
+    display: flex;        
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.TasksView {
+    margin-top: 50px;    
+    display: flex;        
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.TasksView td {
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+}
+
+.TasksView table {
+    border-spacing: 10px;
 }
 
 label {
