@@ -184,6 +184,7 @@ module.exports = { getGroup: function (request, response) {
                     addTaskToGroup: function(request, response) {
                         if(request.body.task_name && request.body.date && request.body.group_id)
                         {
+                            console.log(request.body.date);
                             addTask(request.session.userid, request.body.group_id, request.body.task_name, request.body.date, function(error, results){
                                 if(error || results == null)
                                 {

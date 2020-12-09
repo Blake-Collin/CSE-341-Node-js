@@ -424,8 +424,8 @@ function openGroupView(id, name){
 
                 td1.innerHTML = data.results[i].name;
                 td2.innerHTML = data.results[i].task_name;
-                var date = new Date(data.results[i].duedate);
-                td3.innerHTML = (date.getMonth()+1) + '-' + date.getDate() + '-' + date.getFullYear();
+                var date = new Date(data.results[i].duedate.replace("T00:00:00.000Z", "T07:00:00.000Z"));
+                td3.innerHTML = (date.getMonth()+1) + '-' + date.getDate() + '-' + date.getFullYear();                
 
                 //BUTTONS
                 var buttonComplete = document.createElement('button');
@@ -581,7 +581,7 @@ function createTask(id){
     var date = document.getElementById('newTaskDate').value;
     var name = document.getElementById('GroupName').innerHTML;
 
-    console.log("Name: " + taskName + " Date: " + date);
+    console.log("Name: " + taskName + " Date: " + date);    
 
     var userArray = {task_name: taskName, date: date, group_id: id};
 
